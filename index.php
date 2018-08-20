@@ -1,13 +1,17 @@
 <?php 
 	$name = "Daniel Montero Lopez";
-
-	function checkUsers(){
-		if ($_POST['uname']!==(false)) {
-			echo "SUCCESSFULL";
-		}else{
-			echo "ERROR";
-		}
-	};
+	$checked = "";
+	function example(){
+		var_dump("expression");
+	}
+//	function checkUsers(){
+//		if ($_POST['uname']!==(false)) {
+//			$checked = "SUCCESFULL";
+//		}else{
+//			$checked = "FAILED";
+//		}
+//		var_dump($checked);
+//	}
 ?>
 <html>
 <head>
@@ -22,7 +26,12 @@
 </div>
 
 <div class="openSesion">
-	<input type="button" id="access" onclick="checkUsers()" value="Submmit">
+	<input type="button" id="access" onclick="check();" value="Submmit">
+	<script type="text/javascript">
+		function check(){
+			alert('<?php example(); ?>');
+		}
+	</script>
 </div>
 </body>
 </html>
