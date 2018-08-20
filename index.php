@@ -22,7 +22,7 @@
 </div>
 
 <div class="openSesion">
-	<input type="button" id="access" onclick="checkUsers()">
+	<input type="button" id="access" onclick="checkUsers()" value="Submmit">
 </div>
 </body>
 </html>
