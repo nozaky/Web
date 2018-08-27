@@ -11,10 +11,7 @@
 			echo "Los dos datos son validos";
 		}
 	}
-$strHtmlButton = 	'<div >
-						<br>
-						<input type="submit" name="accept" >
-					</div>';
+$strHtmlButton = 	'';
 
 $strHtml = '<div >
 				<form action="miHome.php" method="POST">	
@@ -31,7 +28,10 @@ $strHtml = '<div >
 								<input type="password" name="pass">	
 							</div>
 						</div>
-						'.$strHtmlButton.'
+						<div>
+							<br>
+							<input type="submit" name="accept" >
+						</div>
 					</div>
 				</form>
 			</div>';
