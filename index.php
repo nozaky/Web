@@ -1,37 +1,41 @@
 <?php 
 	$name = "Daniel Montero Lopez";
 	$checked = "";
-	function example(){
-		var_dump("expression");
-	}
-//	function checkUsers(){
-//		if ($_POST['uname']!==(false)) {
-//			$checked = "SUCCESFULL";
-//		}else{
-//			$checked = "FAILED";
-//		}
-//		var_dump($checked);
-//	}
-?>
-<html>
-<head>
-
-</head>
-<body>
-<h1>Web desarrollada por <?= $name; ?></h1>
-<br>
-<div class="username">
-	<label class="uname">User Name:</label>
-	<input type="text" id="uname" required minlength="4" placeholder="4 characters min.">
-</div>
-
-<div class="openSesion">
-	<input type="button" id="access" onclick="check();" value="Submmit">
-	<script type="text/javascript">
-		function check(){
-			alert('<?php example(); ?>');
+	
+	if(isset($_POST['user']) && isset($_POST['pass'])){
+		$user = $_POST['user'];
+		$pass = $_POST['pass'];
+		if($user==null || $pass==null){
+			echo "Uno de los datos no es valido";
+		}else{
+			echo "Los dos datos son validos";
 		}
-	</script>
-</div>
-</body>
-</html>
+	}
+$strHtmlButton = 	'<div >
+						<br>
+						<input type="submit" name="accept" >
+					</div>';
+
+$strHtml = '<div >
+				<form action="miHome.php" method="POST">	
+					<div id="formLoging">
+						<div >
+							<label >User: </label>
+							<div>
+								<input type="text" name="user">	
+							</div>
+						</div>
+						<div >
+							<label >Password: </label>
+							<div>
+								<input type="password" name="pass">	
+							</div>
+						</div>
+						'.$strHtmlButton.'
+					</div>
+				</form>
+			</div>';
+			
+echo $strHtml;
+
+?>
